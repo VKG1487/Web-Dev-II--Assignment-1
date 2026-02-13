@@ -2,10 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <h1 class="title"> Smart Event Dashboard</h1>
+
+    <div class="container">
+
+        <!-- Left Form -->
+        <div class="card form-card">
+            <h2>Add New Event</h2>
+
+            <form id="eventForm">
+                <label>Event Title:</label>
+                <input type="text" id="title" required>
+
+                <label>Event Date:</label>
+                <input type="date" id="date" required>
+
+                <label>Category:</label>
+                <select id="category">
+                    <option value="Conference">Conference</option>
+                    <option value="Social">Social</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Tech event">Tech Event</option>
+                    <option value="Meetup">Meetup</option>
+                </select>
+
+                <label>Description:</label>
+                <textarea id="description"></textarea>
+
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+
+        <!-- Right Event List -->
+        <div class="card">
+            <h2>My Events</h2>
+
+            <div class="btn-group">
+                <button id="clearAll">Clear All Events</button>
+                <button id="addSample">Add Sample Events</button>
+            </div>
+
+            <div id="eventList"></div>
+        </div>
+    </div>
+    <br></br>
+    <!-- DOM Demo Section -->
+    <div class="card dom-demo">
+        <h2>DOM Manipulation Demo</h2>
+
+        <div id="demoText">
+            <strong>Bold Text</strong> with spaces
+        </div>
+
+        <button id="innerTextBtn">Show innerText</button>
+        <button id="innerHTMLBtn">Show innerHTML</button>
+        <button id="textContentBtn">Show textContent</button>
+
+        <p id="output"></p>
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>
